@@ -1,54 +1,45 @@
-# React + TypeScript + Vite
+Security Vulnerability Dashboard
+================================
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a React-based dashboard application for visualizing and analyzing security vulnerability data from a large JSON file.
 
-Currently, two official plugins are available:
+Setup Instructions
+------------------
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 1\. Clone the repository
 
-## Expanding the ESLint configuration
+Clone the project to your local machine:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+`git clone https://github.com/your-username/security-dashboard.git  cd security-dashboard   `
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### 2\. Install dependencies
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Install the required packages using npm:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+`   npm install   `
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+### 3\. Download the JSON data file
+
+Download the file ui\_demo.json from the following URL:
+
+`   https://github.com/chanduusc/Ui-Demo-Data/blob/main/ui_demo.json   `
+
+### 4\. Place the file in the public directory
+
+After downloading, move ui\_demo.json into the public folder of the project. The final path should be:
+
+`   public/ui_demo.json   `
+
+This is required for the application to load the data correctly.
+
+### 5\. Start the development server
+
+Run the application locally using:
+
+`   npm run dev   `
+
+Then open your browser and go to:
+
+`   http://localhost:5173/   `
+
+That’s it. The application should now be running and fully functional.
